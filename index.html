@@ -31,7 +31,7 @@
 
   
 
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-coy.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body>
@@ -156,41 +156,112 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="[post]-小白也能看懂的 Hxeo+Github 搭建博客教程" class="article article-type-[post]  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/14/hello-world/">Hello World</a>
+      <a class="article-title" href="/2017/09/16/小白也能看懂的 Hxeo+Github 搭建博客教程/">小白也能看懂的 Hxeo+Github 搭建博客教程</a>
     </h1>
   
 
         
-        <a href="/2017/09/14/hello-world/" class="archive-article-date">
-  	<time datetime="2017-09-14T14:19:13.974Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-14</time>
+        <a href="/2017/09/16/小白也能看懂的 Hxeo+Github 搭建博客教程/" class="archive-article-date">
+  	<time datetime="2017-09-16T12:16:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server
-$ hexo server
-$ hexo server
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h1 id="小白也能看懂的-Hxeo-Github-搭建博客教程"><a href="#小白也能看懂的-Hxeo-Github-搭建博客教程" class="headerlink" title="小白也能看懂的 Hxeo+Github 搭建博客教程"></a>小白也能看懂的 Hxeo+Github 搭建博客教程</h1><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1505575952182&amp;di=e0559612ab26f18f7549171032d85bef&amp;imgtype=0&amp;src=http%3A%2F%2Fi.v2ex.co%2F5bb7J7NT.png" alt=""></p>
+<h2 id="Hexo简介："><a href="#Hexo简介：" class="headerlink" title="Hexo简介："></a>Hexo简介：</h2><blockquote>
+<p>Hexo 是一个快速、简洁且高效基于node.js的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+</blockquote>
+<h2 id="1-注册Github和创建域名空间"><a href="#1-注册Github和创建域名空间" class="headerlink" title="1. 注册Github和创建域名空间"></a>1. 注册Github和创建域名空间</h2><h3 id="1-1-注册"><a href="#1-1-注册" class="headerlink" title="1.1. 注册"></a>1.1. 注册</h3><p>首先你需要注册一个<a href="https://github.com" target="_blank" rel="external">Github</a>账号， 已有的可以跳过这一步 创建仓库，注意username，这会影响到你的域名，你的域名将会是 username.github.io ，所以取个高大上的名字吧。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/136678-a5b815963631f1bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="1-2-创建仓库"><a href="#1-2-创建仓库" class="headerlink" title="1.2. 创建仓库"></a>1.2. 创建仓库</h3><p>然后需要创建一个仓库(repository) 来存储我们的网站，点击页面又上你叫的“+”，点击New repository按钮创建仓库, Respository name 中的username.github.io 的username 一定与前面的 Owner 一致，记住你的username下面会用到。<br><img src="http://upload-images.jianshu.io/upload_images/136678-56e4a7256ab4f141.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h2><h3 id="2-1-安装Git和Node-js"><a href="#2-1-安装Git和Node-js" class="headerlink" title="2.1. 安装Git和Node.js"></a>2.1. 安装Git和Node.js</h3><p>安装hexo前需安装以下程序:</p>
+<ul>
+<li><a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git</a></li>
+<li><a href="http://nodejs.cn/download/" target="_blank" rel="external">Node.js</a>  </li>
+</ul>
+<p>点击文字链接即可转到官网下载页面，下载安装程序后直接按照提示安装，记得勾上ADD TO PATH选项，不然安装后还要手动添加环境变量。</p>
+<p>Git用来将本地的项目部署到Github上，以便外网也能访问，同事Git还能提供Git Bash，能使用Linux风格的shell，后面许多操作我们都要用到它。<br>Node.js则是本地JavaScript运行环境，我们安装和运行Hexo都需要Node.js的支持。</p>
+<h3 id="2-2-安装hexo"><a href="#2-2-安装hexo" class="headerlink" title="2.2. 安装hexo"></a>2.2. 安装hexo</h3><p>完成以上安装后，在任意位置右击鼠标，点击Git Bash here 打开终端，输入以下指令并回车执行:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
+<p>注意：终端执行命令结束后会在新的一行显示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ |</div></pre></td></tr></table></figure></p>
+<p>若没有则说明有命令正在执行，请勿关闭终端或执行其他操作。  </p>
+<h2 id="3-建站"><a href="#3-建站" class="headerlink" title="3. 建站"></a>3. 建站</h2><h3 id="3-1-创建博客"><a href="#3-1-创建博客" class="headerlink" title="3.1 创建博客"></a>3.1 创建博客</h3><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹(文件夹可以为任意目录，建议路径中不含中文)中新建所需要的文件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init /d/myblog</div><div class="line">$ <span class="built_in">cd</span> /d/myblog</div><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
+<p>当然，也可以先打开该目录，然后在该目录下右击鼠标，点击 Git Bash here 输入以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
+<p>和cmd命令行一个道理。  </p>
+<h3 id="3-2-更改配置"><a href="#3-2-更改配置" class="headerlink" title="3.2 更改配置"></a>3.2 更改配置</h3><h4 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h4><p>为了使博客不太难看，我们需要安装一个主题，在博客根目录下打开终端，执行以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</div></pre></td></tr></table></figure></p>
+<p>这是我自己现在正用的主题，也是Hexo主题中人气较高的一款，当然Hexo还有<a href="https://hexo.io/themes/" target="_blank" rel="external">更多主题</a>可供选择，可以自己百度或Google找到啦。</p>
+<h4 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h4><p>在博客根目录下有个<code>_config.yml</code>文件，可以用记事本或者其他文本编辑软件打开（推荐notepad++），里面有许多键值对，现在我们要修改一下设置：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="attr">title:</span> <span class="string">接骨木のBLOG</span>   <span class="string">//你博客的名字</span></div><div class="line"><span class="attr">author:</span> <span class="string">接骨木</span>  <span class="string">//你的名字</span></div><div class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span>    <span class="string">//语言</span> <span class="string">中文</span></div><div class="line"><span class="attr">theme:</span> <span class="string">yilia</span>   <span class="string">//刚刚安装的主题名称</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">    type:</span> <span class="string">git</span>    <span class="string">//使用Git</span> <span class="string">发布</span></div><div class="line"><span class="attr">    repo:</span> <span class="attr">https://github.com/username/username.github.io.git</span>    <span class="string">//</span> <span class="string">刚创建的Github仓库</span></div></pre></td></tr></table></figure></p>
+<p>想了解其他配置可参考Hexo的<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官方文档</a>。</p>
+<h4 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h4><p>主题配置在博客目录下的<code>/themes/yilia/_config.yml</code>中修改，可以定制一些个性化内容，在<code>/themes/yilia</code>下有关于该主题的说明文档 README.md，参照文档内容修改配置文件即可，这里略过。</p>
+<h3 id="测试并发布到Github"><a href="#测试并发布到Github" class="headerlink" title="测试并发布到Github"></a>测试并发布到Github</h3><h4 id="本地测试"><a href="#本地测试" class="headerlink" title="本地测试"></a>本地测试</h4><p>在博客根部录下打开终端执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo s</div></pre></td></tr></table></figure></p>
+<p>如果显示以下内容：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">INFO  Start processing</div><div class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</div></pre></td></tr></table></figure></p>
+<p>则说明建站成功啦！<br>此时打开浏览器，在地址栏输入<code>http://localhost:4000/</code>回车，即可看到自己的博客啦！  </p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6240415-d3b7f48f0ce05627.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h4 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h4><p>测试没有问题后，执行以下命令，将生成静态网页文件发布至我们的 Github pages 中，以便外网也能访问你的博客。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</div></pre></td></tr></table></figure></p>
+<p>如果你是是第一次使用Git发布内容，会让你登录Github账号，登录后就会把你的博客上传到Github。最后在浏览器中打开网页<code>http://username.github.io</code>就能够访问了你的博客啦。每次博客内容有更新就用这条语句就能同步到Github上了。</p>
+<h2 id="4-写作"><a href="#4-写作" class="headerlink" title="4.写作"></a>4.写作</h2><h3 id="4-1-写作工具"><a href="#4-1-写作工具" class="headerlink" title="4.1 写作工具"></a>4.1 写作工具</h3><p>写博文需要用到markdown语言，还不了解markdown的同学点<a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">这里</a>，markdown很容易，五分钟就能看懂所有语法，再多加练习就能熟练掌握啦。<br>关于markdown的工具，百度一下就能发现很多，我用的是网易云笔记，因为能实时同步到云端，手机端也能编辑，感觉挺方便的。</p>
+<h3 id="4-2-写作"><a href="#4-2-写作" class="headerlink" title="4.2 写作"></a>4.2 写作</h3><p>要建立新的文章，有两种方式，一是在<code>博客根目录/source/_post</code>内新建一个markdown文件，二是通过命令建立：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure></p>
+<p><code>[layout]</code>不写默认为post，至于其他的属性有兴趣的自己查阅文档。<br>使用命令建立新的文章有一个好处，就是会在文件头自动给你加上标题以及创建时间信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">layout: &apos;[post]&apos;</div><div class="line">title: Hexo+Github搭建博客</div><div class="line">date: 2017-09-16 20:16:21</div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>文件开头以<code>---</code>分隔开的信息可以包含以下内容：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layout</td>
+<td>布局</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题    </td>
+</tr>
+<tr>
+<td>date</td>
+<td>建立日期</td>
+<td>文件建立日期</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>更新日期</td>
+<td>文件更新日期</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>开启文章的评论功能</td>
+<td>true</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>标签（不适用于分页）    </td>
+</tr>
+<tr>
+<td>categories</td>
+<td>分类（不适用于分页）    </td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>覆盖文章网址</td>
+</tr>
+</tbody>
+</table>
+<p>若通过命令新建文章，Hexo 默认以标题做为文件名称，但您可在<code>_congig.yml</code>文件中编辑 <code>new_post_name</code>参数来改变默认的文件名称，举例来说，设为 <code>:year-:month-:day-:title.md</code>可让您更方便的通过日期来管理文章。<br>变量    |描述<br>—|—<br>:title    |标题<br>:year    |建立的年份（4 位数）<br>:month    |建立的月份（2 位数）<br>:i_month|    建立的月份（去掉开头的零）<br>:day    |建立的日期（2 位数）<br>:i_day    |建立的日期（去掉开头的零）</p>
+<h3 id="4-3-发布新文章"><a href="#4-3-发布新文章" class="headerlink" title="4.3 发布新文章"></a>4.3 发布新文章</h3><p>每次更新文章或者其他配置后均可使用以下命令进行发布：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</div></pre></td></tr></table></figure></p>
+<h2 id="5-结语"><a href="#5-结语" class="headerlink" title="5.结语"></a>5.结语</h2><p>当然hexo还有很多神奇的功能我没有讲到，篇幅有限大家自己去看hexo的<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官方文档</a>吧。  </p>
+<p>建站过程中遇到任何问题欢迎联系我一起交流学习 (￣▽￣)~*</p>
 
       
 
@@ -199,11 +270,45 @@ $ hexo server
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hxeo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/教程//" class="article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/14/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/09/16/小白也能看懂的 Hxeo+Github 搭建博客教程/">展开全文 >></a>
         </p>
       
 
@@ -345,6 +450,22 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hxeo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
