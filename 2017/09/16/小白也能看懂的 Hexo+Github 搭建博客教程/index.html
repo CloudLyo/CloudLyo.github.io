@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/136678-a5b815963631f1bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/136678-56e4a7256ab4f141.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6240415-d3b7f48f0ce05627.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-09-18T14:01:59.767Z">
+<meta property="og:updated_time" content="2017-09-21T13:24:32.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小白也能看懂的 Hexo+Github 搭建博客教程">
 <meta name="twitter:description" content="小白也能看懂的 Hexo+Github 搭建博客教程 Hexo简介： Hexo 是一个快速、简洁且高效基于node.js的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。  1. 注册Github和创建域名空间1.1. 注册首先你需要注册一个Github账号， 已有的可以跳过这一步，注意username，这会影响到你的域名，你的域名将">
@@ -235,7 +235,8 @@
 </tr>
 <tr>
 <td>title</td>
-<td>标题    </td>
+<td>标题</td>
+<td></td>
 </tr>
 <tr>
 <td>date</td>
@@ -254,19 +255,56 @@
 </tr>
 <tr>
 <td>tags</td>
-<td>标签（不适用于分页）    </td>
+<td>标签（不适用于分页）</td>
+<td></td>
 </tr>
 <tr>
 <td>categories</td>
-<td>分类（不适用于分页）    </td>
+<td>分类（不适用于分页）</td>
+<td></td>
 </tr>
 <tr>
 <td>permalink</td>
 <td>覆盖文章网址</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>若通过命令新建文章，Hexo 默认以标题做为文件名称，但您可在<code>_congig.yml</code>文件中编辑 <code>new_post_name</code>参数来改变默认的文件名称，举例来说，设为 <code>:year-:month-:day-:title.md</code>可让您更方便的通过日期来管理文章。<br>变量    |描述<br>—|—<br>:title    |标题<br>:year    |建立的年份（4 位数）<br>:month    |建立的月份（2 位数）<br>:i_month|    建立的月份（去掉开头的零）<br>:day    |建立的日期（2 位数）<br>:i_day    |建立的日期（去掉开头的零）</p>
+<p>若通过命令新建文章，Hexo 默认以标题做为文件名称，但您可在<code>_congig.yml</code>文件中编辑 <code>new_post_name</code>参数来改变默认的文件名称，举例来说，设为 <code>:year-:month-:day-:title.md</code>可让您更方便的通过日期来管理文章。  </p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>:year</td>
+<td>建立的年份（4 位数）</td>
+</tr>
+<tr>
+<td>:month</td>
+<td>建立的月份（2 位数）</td>
+</tr>
+<tr>
+<td>:i_month</td>
+<td>建立的月份（去掉开头的零）</td>
+</tr>
+<tr>
+<td>:day</td>
+<td>建立的日期（2 位数）</td>
+</tr>
+<tr>
+<td>:i_day</td>
+<td>建立的日期（去掉开头的零）</td>
+</tr>
+</tbody>
+</table>
 <h3 id="4-3-发布新文章"><a href="#4-3-发布新文章" class="headerlink" title="4.3 发布新文章"></a>4.3 发布新文章</h3><p>每次更新文章或者其他配置后均可使用以下命令进行发布：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</div></pre></td></tr></table></figure></p>
 <h2 id="5-结语"><a href="#5-结语" class="headerlink" title="5.结语"></a>5.结语</h2><p>当然hexo还有很多神奇的功能我没有讲到，篇幅有限大家自己去看hexo的<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官方文档</a>吧。  </p>
 <p>建站过程中遇到任何问题欢迎联系我一起交流学习 (￣▽￣)~*</p>
