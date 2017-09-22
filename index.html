@@ -156,6 +156,98 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-【五分钟教程】线段树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/21/【五分钟教程】线段树/">【五分钟教程】线段树</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/21/【五分钟教程】线段树/" class="archive-article-date">
+  	<time datetime="2017-09-21T13:48:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h1><p>有一段序列：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1,2,3,4,5,6,7,8,9,10</div></pre></td></tr></table></figure></p>
+<p>现在我们要对这一串序列进行修改和询问，例如：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">opt(<span class="number">4</span>,<span class="number">3</span>)    <span class="comment">//将第四个数字加3</span></div><div class="line">query(<span class="number">3</span>,<span class="number">7</span>)  <span class="comment">//询问区间[3,7]所有数字的和(最大值,最小值,最大公因数等)</span></div></pre></td></tr></table></figure></p>
+<p>显然,对于单个数的加减操作,所花时间与序列长度无关,能在o(1)的时间内完成。  </p>
+<p>对于询问操作，以求区间和为例，最普通的方法是将区间[3,7]的数字全部加起来，所花时间与询问的区间长度成正比，设询问的区间长度为n，则需要o(n)的时间才能完成。当序列长度和询问的区间长度非常大、询问次数非常多时（询问总长度超过$10^6$数量级），询问耗时将会非常长。  </p>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>当询问区间非常长是该如何减少耗时呢？不妨考虑如下数据结构：<br><img src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=0622b6a868600c33e474d69a7b253a6a/bd3eb13533fa828bcb5fe85ffe1f4134970a5a09.jpg" alt=""></p>
+<p>这是一颗二叉树，二叉树的每个节点保存了一个区间的属性，在这个问题中每个结点保存了对应区间的所有数字的和。  </p>
+<p>还是以<code>query(3,7)</code>和<code>opt(4,3)</code>为例，对于查询操作我们只需要将结点[3,3]、[4,5]、[6,7]的值相加即可。对于修改操作我们需要修改结点[4,4]、[4,5]、[1,5]、[1,10]的值。事实上，设序列总长度为N，进行一次修改操作和一次询问操作的时间复杂度均为$o(log_2(N))$。  </p>
+<p>虽然修改操作的时间复杂度增加了，但考虑到$log_2(1000000)≈20$，当序列长度很大，询问次数很多的时候，采用线段树进行区间修改和查询将会节省大量时间。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线段树</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/五分钟教程//" class="article-tag-list-link color1">五分钟教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/21/【五分钟教程】线段树/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="[post]-小白也能看懂的 Hexo+Github 搭建博客教程" class="article article-type-[post]  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -503,6 +595,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
               </li>
             
             <div class="clearfix"></div>

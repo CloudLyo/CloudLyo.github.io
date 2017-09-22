@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cloudnew007.github.io">
-  <title>Category: 教程 | 接骨木のBLOG</title>
+  <title>【五分钟教程】线段树 | 接骨木のBLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="接骨木のBLOG">
-<meta property="og:url" content="https://cloudnew007.github.io/categories/教程/index.html">
+  <meta name="description" content="问题引入有一段序列：11,2,3,4,5,6,7,8,9,10 现在我们要对这一串序列进行修改和询问，例如：12opt(4,3)    //将第四个数字加3query(3,7)  //询问区间[3,7]所有数字的和(最大值,最小值,最大公因数等) 显然,对于单个数的加减操作,所花时间与序列长度无关,能在o(1)的时间内完成。   对于询问操作，以求区间和为例，最普通的方法是将区间[3,7]的数字全">
+<meta name="keywords" content="线段树">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【五分钟教程】线段树">
+<meta property="og:url" content="https://cloudnew007.github.io/2017/09/21/【五分钟教程】线段树/index.html">
 <meta property="og:site_name" content="接骨木のBLOG">
+<meta property="og:description" content="问题引入有一段序列：11,2,3,4,5,6,7,8,9,10 现在我们要对这一串序列进行修改和询问，例如：12opt(4,3)    //将第四个数字加3query(3,7)  //询问区间[3,7]所有数字的和(最大值,最小值,最大公因数等) 显然,对于单个数的加减操作,所花时间与序列长度无关,能在o(1)的时间内完成。   对于询问操作，以求区间和为例，最普通的方法是将区间[3,7]的数字全">
+<meta property="og:image" content="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=0622b6a868600c33e474d69a7b253a6a/bd3eb13533fa828bcb5fe85ffe1f4134970a5a09.jpg">
+<meta property="og:updated_time" content="2017-09-22T14:10:10.077Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="接骨木のBLOG">
+<meta name="twitter:title" content="【五分钟教程】线段树">
+<meta name="twitter:description" content="问题引入有一段序列：11,2,3,4,5,6,7,8,9,10 现在我们要对这一串序列进行修改和询问，例如：12opt(4,3)    //将第四个数字加3query(3,7)  //询问区间[3,7]所有数字的和(最大值,最小值,最大公因数等) 显然,对于单个数的加减操作,所花时间与序列长度无关,能在o(1)的时间内完成。   对于询问操作，以求区间和为例，最普通的方法是将区间[3,7]的数字全">
+<meta name="twitter:image" content="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=0622b6a868600c33e474d69a7b253a6a/bd3eb13533fa828bcb5fe85ffe1f4134970a5a09.jpg">
   
     <link rel="alternative" href="/atom.xml" title="接骨木のBLOG" type="application/atom+xml">
   
@@ -154,83 +161,185 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-【五分钟教程】线段树" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-[post]">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/16/小白也能看懂的 Hexo+Github 搭建博客教程/" class="archive-article-date">
-  	<time datetime="2017-09-16T12:16:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/16/小白也能看懂的 Hexo+Github 搭建博客教程/">小白也能看懂的 Hexo+Github 搭建博客教程</a>
+    <h1 class="article-title" itemprop="name">
+      【五分钟教程】线段树
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/09/21/【五分钟教程】线段树/" class="archive-article-date">
+  	<time datetime="2017-09-21T13:48:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h1><p>有一段序列：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1,2,3,4,5,6,7,8,9,10</div></pre></td></tr></table></figure></p>
+<p>现在我们要对这一串序列进行修改和询问，例如：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">opt(<span class="number">4</span>,<span class="number">3</span>)    <span class="comment">//将第四个数字加3</span></div><div class="line">query(<span class="number">3</span>,<span class="number">7</span>)  <span class="comment">//询问区间[3,7]所有数字的和(最大值,最小值,最大公因数等)</span></div></pre></td></tr></table></figure></p>
+<p>显然,对于单个数的加减操作,所花时间与序列长度无关,能在o(1)的时间内完成。  </p>
+<p>对于询问操作，以求区间和为例，最普通的方法是将区间[3,7]的数字全部加起来，所花时间与询问的区间长度成正比，设询问的区间长度为n，则需要o(n)的时间才能完成。当序列长度和询问的区间长度非常大、询问次数非常多时（询问总长度超过$10^6$数量级），询问耗时将会非常长。  </p>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>当询问区间非常长是该如何减少耗时呢？不妨考虑如下数据结构：<br><img src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=0622b6a868600c33e474d69a7b253a6a/bd3eb13533fa828bcb5fe85ffe1f4134970a5a09.jpg" alt=""></p>
+<p>这是一颗二叉树，二叉树的每个节点保存了一个区间的属性，在这个问题中每个结点保存了对应区间的所有数字的和。  </p>
+<p>还是以<code>query(3,7)</code>和<code>opt(4,3)</code>为例，对于查询操作我们只需要将结点[3,3]、[4,5]、[6,7]的值相加即可。对于修改操作我们需要修改结点[4,4]、[4,5]、[1,5]、[1,10]的值。事实上，设序列总长度为N，进行一次修改操作和一次询问操作的时间复杂度均为$o(log_2(N))$。  </p>
+<p>虽然修改操作的时间复杂度增加了，但考虑到$log_2(1000000)≈20$，当序列长度很大，询问次数很多的时候，采用线段树进行区间修改和查询将会节省大量时间。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hxeo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线段树</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/教程//" class="article-tag-list-link color3">教程</a>
+        			<a href="/categories/五分钟教程//" class="article-tag-list-link color1">五分钟教程</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a><a href="http://cli.im/api/qrcode">生成本页二维码</a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://cloudnew007.github.io/2017/09/21/【五分钟教程】线段树/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/09/16/小白也能看懂的 Hexo+Github 搭建博客教程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小白也能看懂的 Hexo+Github 搭建博客教程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -253,10 +362,10 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: false,
 		root: "/",
